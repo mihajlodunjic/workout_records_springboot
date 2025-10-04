@@ -1,0 +1,10 @@
+package org.fon.workout_records.repository;
+
+import org.fon.workout_records.entity.Trainer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface TrainerRepository extends JpaRepository<Trainer, Long> {
+    Optional<Trainer> findByUsername(String username);
+}
