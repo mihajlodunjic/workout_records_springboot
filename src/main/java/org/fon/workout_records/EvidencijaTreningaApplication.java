@@ -14,18 +14,5 @@ public class EvidencijaTreningaApplication {
         SpringApplication.run(EvidencijaTreningaApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner testInsert(TrainerRepository trainerRepo) {
-        return args -> {
-            if (trainerRepo.count() == 0) {
-                Trainer t = new Trainer();
-                t.setFirstName("John");
-                t.setLastName("Doe");
-                t.setUsername("jdoe");
-                t.setPassword("secret123");
-                trainerRepo.save(t);
-                System.out.println("✅ Test trainer inserted into DB!");
-            }
-        };
-    }
+
 }
