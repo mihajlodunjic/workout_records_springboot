@@ -13,7 +13,6 @@ import java.net.URI;
 import java.time.LocalDate;
 import java.util.List;
 
-//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/training-record")
 public class TrainingRecordController {

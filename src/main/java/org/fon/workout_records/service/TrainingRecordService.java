@@ -80,7 +80,6 @@ public class TrainingRecordService {
     }
 
     private TrainingRecordDto createOrMerge(TrainingRecordDto dto) {
-        // same as create, but recordId may be set (JPA merge via save)
         TrainingRecord r = mapper.toEntity(dto);
         r.setTrainer(em.getReference(Trainer.class, dto.getTrainerId()));
         r.setClient(em.getReference(Client.class, dto.getClientId()));

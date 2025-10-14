@@ -25,7 +25,6 @@ public class TrainingItemDto {
     @NotNull
     private Long activityId;
 
-    // getters/setters
     public Long getItemId() { return itemId; }
     public void setItemId(Long itemId) { this.itemId = itemId; }
     public Integer getItemNo() { return itemNo; }

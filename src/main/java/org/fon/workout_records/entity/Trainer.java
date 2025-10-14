@@ -22,11 +22,9 @@ public class Trainer {
     @Column(nullable = false, length = 60)
     private String username;
 
-    // VAŽNO: polje za hash lozinke + get/set
     @Column(nullable = false, length = 255)
     private String passwordHash;
 
-    // --- getters/setters ---
     public Long getTrainerId() { return trainerId; }
     public void setTrainerId(Long trainerId) { this.trainerId = trainerId; }
 

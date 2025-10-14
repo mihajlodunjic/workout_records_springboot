@@ -34,7 +34,6 @@ public class Gym {
     @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL, orphanRemoval = false)
     private List<Client> clients = new ArrayList<>();
 
-    // getters & setters
     public Long getGymId() { return gymId; }
     public void setGymId(Long gymId) { this.gymId = gymId; }
     public String getName() { return name; }

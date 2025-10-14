@@ -24,7 +24,6 @@ public class GymDto {
     @Size(max = 120)
     private String email;
 
-    // getters & setters
     public Long getGymId() { return gymId; }
     public void setGymId(Long gymId) { this.gymId = gymId; }
     public String getName() { return name; }

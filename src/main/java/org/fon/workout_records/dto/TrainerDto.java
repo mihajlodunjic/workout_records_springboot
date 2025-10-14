@@ -5,7 +5,7 @@ public class TrainerDto {
     private Long trainerId;
     private String firstName;
     private String lastName;
-    private String username; // lozinka se nikad ne vraća
+    private String username;
     public Long getTrainerId() { return trainerId; }
     public void setTrainerId(Long trainerId) { this.trainerId = trainerId; }
     public String getFirstName() { return firstName; }

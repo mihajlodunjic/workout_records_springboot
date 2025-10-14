@@ -39,7 +39,6 @@ public class Client {
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = false)
     private List<TrainingRecord> trainingRecords = new ArrayList<>();
 
-    // getters & setters
     public Long getClientId() { return clientId; }
     public void setClientId(Long clientId) { this.clientId = clientId; }
     public String getFirstName() { return firstName; }

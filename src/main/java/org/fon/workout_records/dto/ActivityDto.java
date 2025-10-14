@@ -16,7 +16,6 @@ public class ActivityDto {
     @Size(max = 120)
     private String name;
 
-    // getters & setters
     public Long getActivityId() { return activityId; }
     public void setActivityId(Long activityId) { this.activityId = activityId; }
     public ActivityCategory getCategory() { return category; }

@@ -31,7 +31,6 @@ public class TrainingRecordDto {
     @Valid
     private List<TrainingItemDto> items;
 
-    // getters/setters
     public Long getRecordId() { return recordId; }
     public void setRecordId(Long recordId) { this.recordId = recordId; }
     public LocalDate getTrainingDate() { return trainingDate; }

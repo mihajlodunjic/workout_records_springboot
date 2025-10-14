@@ -28,7 +28,6 @@ public class ClientDto {
     @NotNull
     private Long gymId;
 
-    // getters/setters
     public Long getClientId() { return clientId; }
     public void setClientId(Long clientId) { this.clientId = clientId; }
     public String getFirstName() { return firstName; }

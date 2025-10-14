@@ -40,7 +40,6 @@ public class TrainingRecord {
     @OneToMany(mappedBy = "record", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TrainingItem> items = new ArrayList<>();
 
-    // helpers
     public void addItem(TrainingItem item) {
         item.setRecord(this);
         this.items.add(item);
@@ -50,7 +49,6 @@ public class TrainingRecord {
         this.items.remove(item);
     }
 
-    // getters & setters
     public Long getRecordId() { return recordId; }
     public void setRecordId(Long recordId) { this.recordId = recordId; }
     public LocalDate getTrainingDate() { return trainingDate; }

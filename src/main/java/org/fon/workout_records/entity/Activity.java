@@ -26,7 +26,6 @@ public class Activity {
     @OneToMany(mappedBy = "activity", cascade = CascadeType.ALL, orphanRemoval = false)
     private List<TrainingItem> items = new ArrayList<>();
 
-    // getters & setters
     public Long getActivityId() { return activityId; }
     public void setActivityId(Long activityId) { this.activityId = activityId; }
     public ActivityCategory getCategory() { return category; }

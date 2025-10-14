@@ -49,7 +49,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
     }
 
-    // 404 - JPA Entity not found (ako je koristiš)
+    // 404 - JPA Entity not found
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<ApiError> handleEntityNotFound(EntityNotFoundException ex, HttpServletRequest req) {
         ApiError body = build(HttpStatus.NOT_FOUND, "Not Found", ex.getMessage(), req.getRequestURI(), null);
@@ -63,7 +63,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(body);
     }
 
-    // ResponseStatusException i ErrorResponseException (Spring stil)
+    // ResponseStatusException i ErrorResponseException
     @ExceptionHandler({ ResponseStatusException.class, ErrorResponseException.class })
     public ResponseEntity<ApiError> handleResponseStatus(RuntimeException ex, HttpServletRequest req) {
         HttpStatus status;
@@ -84,7 +84,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(status).body(body);
     }
 
-    // 409 - npr. unique constraint (uk_activity_name, uk_gym_name, username)
+    // 409 - npr unique constraint (username)
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ApiError> handleDataIntegrity(DataIntegrityViolationException ex, HttpServletRequest req) {
         ApiError body = build(HttpStatus.CONFLICT, "Data integrity violation",
@@ -92,7 +92,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(body);
     }
 
-    // 400 - IllegalArgumentException iz servisa (umesto golih RuntimeException)
+    // 400 - IllegalArgumentException iz servisa
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ApiError> handleIllegalArgument(IllegalArgumentException ex, HttpServletRequest req) {
         ApiError body = build(HttpStatus.BAD_REQUEST, "Bad Request", ex.getMessage(), req.getRequestURI(), null);

@@ -14,14 +14,14 @@ public class TrainingItem {
     private Long itemId;
 
     @Column(name = "item_no")
-    private Integer itemNo; // e.g. 1,2,3...
+    private Integer itemNo;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
     private Intensity intensity = Intensity.MEDIUM;
 
     private Integer sets;
-    private Double weight;  // optional, for strength exercises
+    private Double weight;
     @Column(length = 500)
     private String note;
 
@@ -33,7 +33,6 @@ public class TrainingItem {
     @JoinColumn(name = "activity_id", nullable = false)
     private Activity activity;
 
-    // getters & setters
     public Long getItemId() { return itemId; }
     public void setItemId(Long itemId) { this.itemId = itemId; }
     public Integer getItemNo() { return itemNo; }

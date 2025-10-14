@@ -56,7 +56,6 @@ public class TrainerService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Trainer not found"));
         existing.setFirstName(dto.getFirstName());
         existing.setLastName(dto.getLastName());
-        // username ne menjamo ovde (ili proveri unique po želji)
         repo.save(existing);
         return mapper.toDto(existing);
     }
